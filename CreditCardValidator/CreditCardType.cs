@@ -4,20 +4,16 @@
     {
         Unknown,
 
-        [Lengths(15)]
-        [Regex("^(34|37)")]
+        [Regex("^(34|37)\\d{15}")]
         AMEX,
 
-        [Lengths(16)]
-        [Regex("^(6011)")]
+        [Regex("^(6011)\\d{16}")]
         Discover,
 
-        [Lengths(16)]
-        [Regex("^(51|52|53|54|55)")]
+        [Regex("^(51|52|53|54|55)\\d{16}")]
         MasterCard,
 
-        [Lengths(13, 16)]
-        [Regex("^(4)")]
+        [Regex("^(4)\\d{13,16}")]
         Visa
     }
 }

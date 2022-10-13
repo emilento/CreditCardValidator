@@ -1,7 +1,9 @@
-﻿namespace CreditCardValidator
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CreditCardValidator
 {
-    [AttributeUsage(AttributeTargets.All)]
-    internal class RegexAttribute : Attribute
+    [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field, AllowMultiple = false)]
+    public sealed class RegexAttribute : ValidationAttribute
     {
         public RegexAttribute(string expression)
         {
